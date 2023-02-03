@@ -1,12 +1,17 @@
 {
     "name": "supala/emeeting",
     "description": "model ga emeeting",
+    "license": "MIT",
     "authors": [
         {
             "name": "muhammad gifary",
             "email": "muhammadgifary@gmail.com"
         }
     ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/database": "^5.*"
+    },
     "autoload": {
         "psr-4": {
             "Supala\\Emeeting\\": "src/"
