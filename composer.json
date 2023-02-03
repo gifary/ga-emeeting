@@ -1,0 +1,15 @@
+{
+    "name": "supala/emeeting",
+    "description": "model ga emeeting",
+    "authors": [
+        {
+            "name": "muhammad gifary",
+            "email": "muhammadgifary@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Supala\\Emeeting\\": "src/"
+        }
+    }
+}
