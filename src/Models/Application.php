@@ -41,6 +41,6 @@ class Application extends Model
      */
     public function userRoles()
     {
-        return $this->hasMany('App\Models\Emeeting\UserRole');
+        return $this->hasMany(UserRole::class);
     }
 }

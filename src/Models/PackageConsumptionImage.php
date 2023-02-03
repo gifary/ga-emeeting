@@ -49,6 +49,6 @@ class PackageConsumptionImage extends Model
      */
     public function packageConsumption()
     {
-        return $this->belongsTo('App\Models\Emeeting\PackageConsumption', 'package_consumption_id');
+        return $this->belongsTo(PackageConsumption::class, 'package_consumption_id');
     }
 }

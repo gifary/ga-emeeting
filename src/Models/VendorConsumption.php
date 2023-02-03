@@ -54,7 +54,7 @@ class VendorConsumption extends Model
      */
     public function createdBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
 
     /**
@@ -62,7 +62,7 @@ class VendorConsumption extends Model
      */
     public function updatedBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'updated_by');
+        return $this->belongsTo(User::class, 'updated_by');
     }
 
     /**
@@ -70,6 +70,6 @@ class VendorConsumption extends Model
      */
     public function packageConsumptions()
     {
-        return $this->hasMany('App\Models\Emeeting\PackageConsumption', 'vendor_consumption_id');
+        return $this->hasMany(PackageConsumption::class, 'vendor_consumption_id');
     }
 }

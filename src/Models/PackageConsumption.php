@@ -53,7 +53,7 @@ class PackageConsumption extends Model
      */
     public function packageConsumptionImages()
     {
-        return $this->hasMany('App\Models\Emeeting\PackageConsumptionImage', 'package_consumption_id');
+        return $this->hasMany(PackageConsumption::class, 'package_consumption_id');
     }
 
     /**
@@ -61,7 +61,7 @@ class PackageConsumption extends Model
      */
     public function createdBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
 
     /**
@@ -69,7 +69,7 @@ class PackageConsumption extends Model
      */
     public function updatedBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'updated_by');
+        return $this->belongsTo(User::class, 'updated_by');
     }
 
     /**
@@ -77,6 +77,6 @@ class PackageConsumption extends Model
      */
     public function vendorConsumption()
     {
-        return $this->belongsTo('App\Models\Emeeting\VendorConsumption', 'vendor_consumption_id');
+        return $this->belongsTo(VendorConsumption::class, 'vendor_consumption_id');
     }
 }

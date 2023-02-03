@@ -50,7 +50,7 @@ class RequestConsumption extends Model
      */
     public function createdBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
 
     /**
@@ -58,7 +58,7 @@ class RequestConsumption extends Model
      */
     public function request()
     {
-        return $this->belongsTo('App\Models\Emeeting\Request', 'request_id');
+        return $this->belongsTo(Request::class, 'request_id');
     }
 
     /**
@@ -66,6 +66,6 @@ class RequestConsumption extends Model
      */
     public function updatedBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'updated_by');
+        return $this->belongsTo(User::class, 'updated_by');
     }
 }

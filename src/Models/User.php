@@ -10,7 +10,7 @@ class User extends Model
     use Notifiable;
 
     protected $connection = 'pgsql';
-    protected $table = 'public.user';
+    protected $table = 'user';
 
     public function routeNotificationForFcm()
     {
@@ -19,6 +19,6 @@ class User extends Model
 
     public function internal()
     {
-        return $this->hasOne(UserInternal::class, 'user_id');
+        return $this->belongsTo(UserInternal::class, 'user_id', 'id');
     }
 }

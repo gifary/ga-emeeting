@@ -41,7 +41,7 @@ class UserRole extends Model
      */
     public function application()
     {
-        return $this->belongsTo('App\Models\Emeeting\Application');
+        return $this->belongsTo(Application::class);
     }
 
     /**
@@ -49,7 +49,7 @@ class UserRole extends Model
      */
     public function role()
     {
-        return $this->belongsTo('App\Models\Emeeting\Role');
+        return $this->belongsTo(Role::class);
     }
 
     /**
@@ -57,6 +57,6 @@ class UserRole extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\Models\Emeeting\User');
+        return $this->belongsTo(User::class);
     }
 }

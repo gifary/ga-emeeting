@@ -43,7 +43,7 @@ class Unit extends Model
      */
     public function personnelAreas()
     {
-        return $this->hasMany('App\Models\Emeeting\PersonnelArea');
+        return $this->hasMany(PersonnelArea::class);
     }
 
     /**
@@ -51,7 +51,7 @@ class Unit extends Model
      */
     public function floors()
     {
-        return $this->hasMany('App\Models\Emeeting\Floor');
+        return $this->hasMany(Floor::class);
     }
 
     /**
@@ -59,6 +59,6 @@ class Unit extends Model
      */
     public function businessAreas()
     {
-        return $this->hasMany('App\Models\Emeeting\BusinessArea');
+        return $this->hasMany(BusinessArea::class);
     }
 }

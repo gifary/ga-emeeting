@@ -50,7 +50,7 @@ class PersonnelArea extends Model
      */
     public function userInternals()
     {
-        return $this->hasMany('App\Models\Emeeting\UserInternal');
+        return $this->hasMany(UserInternal::class);
     }
 
     /**
@@ -58,6 +58,6 @@ class PersonnelArea extends Model
      */
     public function personnelSubAreas()
     {
-        return $this->hasMany('App\Models\Emeeting\PersonnelSubArea');
+        return $this->hasMany(PersonnelSubArea::class);
     }
 }

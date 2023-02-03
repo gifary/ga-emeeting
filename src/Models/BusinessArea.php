@@ -42,7 +42,7 @@ class BusinessArea extends Model
      */
     public function userInternals()
     {
-        return $this->hasMany('App\Models\Emeeting\UserInternal');
+        return $this->hasMany(UserInternal::class);
     }
 
     /**
@@ -50,6 +50,6 @@ class BusinessArea extends Model
      */
     public function unit()
     {
-        return $this->belongsTo('App\Models\Emeeting\Unit');
+        return $this->belongsTo(Unit::class);
     }
 }

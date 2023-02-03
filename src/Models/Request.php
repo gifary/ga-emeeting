@@ -47,9 +47,17 @@ use Illuminate\Database\Eloquent\Model;
  * @property Room $room
  * @property DelegateGrab[] $delegateGrabs
  * @property ServiceAppraisal[] $serviceAppraisals
+ * @property User $user
  */
 class Request extends Model
 {
+    const STATUSES = [
+        'NEW',
+        'APR',
+        'RJC',
+        'CAN'
+    ];
+
     /**
      * The table associated with the model.
      *
@@ -81,7 +89,7 @@ class Request extends Model
      */
     public function requestConsumptions()
     {
-        return $this->hasMany('App\Models\Emeeting\EventManag.requestConsumption', 'request_id');
+        return $this->hasMany(RequestConsumption::class, 'request_id');
     }
 
     /**
@@ -89,7 +97,7 @@ class Request extends Model
      */
     public function room()
     {
-        return $this->belongsTo('App\Models\Emeeting\EventManag.room', 'room_id');
+        return $this->belongsTo(Room::class, 'room_id');
     }
 
     /**
@@ -97,7 +105,7 @@ class Request extends Model
      */
     public function delegateGrabs()
     {
-        return $this->hasMany('App\Models\Emeeting\DelegateGrab', 'request_id');
+        return $this->hasMany(DelegateGrab::class, 'request_id');
     }
 
     /**
@@ -105,7 +113,7 @@ class Request extends Model
      */
     public function serviceAppraisals()
     {
-        return $this->hasMany('App\Models\Emeeting\ServiceAppraisal', 'request_id');
+        return $this->hasMany(ServiceAppraisal::class, 'request_id');
     }
 
     public function user()

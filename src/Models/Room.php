@@ -54,7 +54,7 @@ class Room extends Model
      */
     public function facilities()
     {
-        return $this->belongsToMany('App\Models\Emeeting\Facility', 'event_manag.room_facilities', 'room_id', 'facility_id');
+        return $this->belongsToMany(Facility::class, 'event_manag.room_facilities', 'room_id', 'facility_id');
     }
 
     /**
@@ -62,7 +62,7 @@ class Room extends Model
      */
     public function requests()
     {
-        return $this->hasMany('App\Models\Emeeting\Request', 'room_id');
+        return $this->hasMany(Request::class, 'room_id');
     }
 
     /**
@@ -70,6 +70,6 @@ class Room extends Model
      */
     public function roomImages()
     {
-        return $this->hasMany('App\Models\Emeeting\RoomImage', 'room_id');
+        return $this->hasMany(RoomImage::class, 'room_id');
     }
 }

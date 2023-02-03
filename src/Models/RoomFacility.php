@@ -37,7 +37,7 @@ class RoomFacility extends Model
      */
     public function facility()
     {
-        return $this->belongsTo('App\Models\Emeeting\Facility', 'facility_id');
+        return $this->belongsTo(Facility::class, 'facility_id');
     }
 
     /**
@@ -45,6 +45,6 @@ class RoomFacility extends Model
      */
     public function room()
     {
-        return $this->belongsTo('App\Models\Emeeting\Room', 'room_id');
+        return $this->belongsTo(Room::class, 'room_id');
     }
 }

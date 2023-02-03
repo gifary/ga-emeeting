@@ -67,7 +67,7 @@ class UserInternal extends Model
      */
     public function businessArea()
     {
-        return $this->belongsTo('App\Models\Emeeting\BusinessArea');
+        return $this->belongsTo(BusinessArea::class);
     }
 
     /**
@@ -75,7 +75,7 @@ class UserInternal extends Model
      */
     public function floor()
     {
-        return $this->belongsTo('App\Models\Emeeting\Floor');
+        return $this->belongsTo(Floor::class);
     }
 
     /**
@@ -83,7 +83,7 @@ class UserInternal extends Model
      */
     public function personnelArea()
     {
-        return $this->belongsTo('App\Models\Emeeting\PersonnelArea');
+        return $this->belongsTo(PersonnelArea::class);
     }
 
     /**
@@ -91,7 +91,7 @@ class UserInternal extends Model
      */
     public function personnelSubArea()
     {
-        return $this->belongsTo('App\Models\Emeeting\PersonnelSubArea');
+        return $this->belongsTo(PersonnelSubArea::class);
     }
 
     /**
@@ -99,6 +99,6 @@ class UserInternal extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\Models\Emeeting\User');
+        return $this->belongsTo(User::class);
     }
 }

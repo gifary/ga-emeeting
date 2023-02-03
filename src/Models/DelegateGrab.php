@@ -54,6 +54,6 @@ class DelegateGrab extends Model
      */
     public function request()
     {
-        return $this->belongsTo('App\Models\Emeeting\Request', 'request_id');
+        return $this->belongsTo(Request::class, 'request_id');
     }
 }

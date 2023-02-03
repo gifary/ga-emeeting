@@ -51,7 +51,7 @@ class RoomImage extends Model
      */
     public function createdBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
 
     /**
@@ -59,7 +59,7 @@ class RoomImage extends Model
      */
     public function room()
     {
-        return $this->belongsTo('App\Models\Emeeting\Room', 'room_id');
+        return $this->belongsTo(Room::class, 'room_id');
     }
 
     /**
@@ -67,6 +67,6 @@ class RoomImage extends Model
      */
     public function updatedBy()
     {
-        return $this->belongsTo('App\Models\Emeeting\User', 'updated_by');
+        return $this->belongsTo(User::class, 'updated_by');
     }
 }
