@@ -107,4 +107,9 @@ class Request extends Model
     {
         return $this->hasMany('App\Models\Emeeting\ServiceAppraisal', 'request_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
