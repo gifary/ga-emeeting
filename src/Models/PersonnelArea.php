@@ -42,7 +42,7 @@ class PersonnelArea extends Model
      */
     public function unit()
     {
-        return $this->belongsTo('App\Models\Emeeting\Unit');
+        return $this->belongsTo(Unit::class);
     }
 
     /**
