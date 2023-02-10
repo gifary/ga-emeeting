@@ -118,6 +118,11 @@ class Request extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        if (class_exists("App\Models\UserEMeeting")) {
+            return $this->belongsTo("App\Models\UserEMeeting", 'user_id');
+        }else{
+            return $this->belongsTo(User::class, 'user_id');
+        }
+
     }
 }
