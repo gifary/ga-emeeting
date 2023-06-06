@@ -53,7 +53,7 @@ class UserInternal extends Model
     /**
      * @var array
      */
-    protected $fillable = ['business_area_id', 'personnel_area_id', 'personnel_sub_area_id', 'floor_id', 'nip', 'employee_number', 'remember_token', 'hr_grade', 'hr_officer_employee_number', 'hr_pernr', 'hr_org_unit', 'hr_org1_code', 'created_at', 'updated_at', 'level'];
+    protected $fillable = ['business_area_id', 'personnel_area_id', 'personnel_sub_area_id', 'floor_id', 'nip', 'employee_number', 'remember_token', 'hr_grade', 'hr_officer_employee_number', 'hr_pernr', 'hr_org_unit', 'hr_org1_code', 'created_at', 'updated_at', 'level' ,'user_id'];
 
     /**
      * The connection name for the model.
