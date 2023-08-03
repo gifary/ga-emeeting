@@ -70,7 +70,7 @@ class PengajuanNAC extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
-    public function PersonnelAreas()
+    public function personnelAreas()
     {
         return $this->belongsTo(PersonnelArea::class, 'personnel_area_id');
     }

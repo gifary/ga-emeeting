@@ -20,7 +20,7 @@ class PengajuanNACFile extends Model
      *
      * @var string
      */
-    protected $table = 'pengajuan_nac';
+    protected $table = 'pengajuan_nac_file';
 
     /**
      * @var array
