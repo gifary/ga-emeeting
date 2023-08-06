@@ -45,7 +45,7 @@ class PengajuanNAC extends Model
     /**
      * @var array
      */
-    protected $fillable = ['jenis_uraian_biaya_id', 'kualifikasi_biaya_id', 'personnel_area_id', 'personnel_sub_area_id', 'user_id', 'approver_id', 'deskripsi_kebutuhan', 'tanggal_kebutuhan', 'jumlah_pegawai', 'vp', 'status', 'status_by', 'created_at', 'updated_at', 'deleted_at'];
+    protected $guarded = ['id'];
 
     /**
      * The connection name for the model.

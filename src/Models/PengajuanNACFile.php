@@ -28,7 +28,7 @@ class PengajuanNACFile extends Model
     /**
      * @var array
      */
-    protected $fillable = ['pengajuan_nac_id', 'filename', 'created_at', 'updated_at', 'deleted_at'];
+     protected $guarded = ['id'];
 
     /**
      * The connection name for the model.
