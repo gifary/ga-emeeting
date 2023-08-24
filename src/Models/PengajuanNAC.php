@@ -119,4 +119,9 @@ class PengajuanNAC extends Model
     {
         return $this->hasMany(PengajuanNACFile::class, 'pengajuan_nac_id');
     }
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class,'room_id','id');
+    }
 }
