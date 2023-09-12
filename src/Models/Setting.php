@@ -33,7 +33,7 @@ class Setting extends Model
     /**
      * @var array
      */
-    protected $fillable = ['key', 'value', 'created_at', 'updated_at', 'deleted_at', 'personnel_area_id', 'personnel_sub_area_id'];
+    protected $guarded = ['id'];
 
     /**
      * The connection name for the model.
